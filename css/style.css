@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  scroll-behavior: smooth;
+  /* font-family: "Bangers", cursive; */
+
+  /* font-family: "Bangers", cursive;
+
+  font-family: "Open Sans", sans-serif;
+
+  font-family: "Amatic SC", cursive; */
+}
+
+h1,
+h2,
+h3,
+h4.h5,
+h5 {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.header__title {
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: large;
+  letter-spacing: 10px;
+  text-shadow: 2px 2px #ff6a5c;
+  font-size: 23px;
+  font-weight: bold;
+}
+.header__mask {
+  background-image: url("../img/nikita-kachanovsky-OVbeSXRk_9E-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  font-size: x-large;
+  padding: 10px;
+  align-items: center;
+  text-align: left;
+  display: flex;
+  background-color: #414141;
+  color: #ffffff;
+}
+.header__mask h1 {
+  width: 100%;
+  text-align: left;
+}
+.works__section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px;
+  /* margin: 50px; */
+  background-color: #ff6a5c;
+  color: #ffffff;
+}
+.works__section:nth-child(even) {
+  flex-direction: row-reverse;
+  background-color: #056571;
+}
+
+.works__section__text {
+  width: 50%;
+}
+
+.works__section__img {
+  width: 30%;
+}
+.works__section__img img {
+  width: 100%;
+  height: 300px;
+  /* filter: grayscale(50%); */
+}
+.work__section__text title {
+  font-size: 37px;
+}
+.work__section__text_description {
+  font-size: 23px;
+  line-height: 1.5;
+}
+
+.section__title {
+  text-decoration: underline;
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #ff6a5c;
+  letter-spacing: 10px;
+}
+.stack__section {
+  display: flex;
+}
+.stack__section__item {
+  width: 50%;
+  text-align: center;
+}
+
+.stack__section__item img {
+  width: 200px;
+  filter: grayscale(100%);
+}
+.text_shadow {
+  text-shadow: 2px 2px #ff6a5c;
+  letter-spacing: 10px;
+}
+
+.stack__name {
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  margin: 5px;
+  border: 3px solid white;
+  color: white;
+  text-shadow: 2px 2px #ff6a5c;
+  padding: 5px 20px 5px 20px;
+  transition: 1000ms;
+  text-transform: uppercase;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+a:hover {
+  background-color: #ffffff;
+  color: #ff6a5c;
+  text-shadow: 2px 2px #ffffff;
+}

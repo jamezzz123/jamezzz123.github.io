@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Site</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header__title">
+        <h3>Chinwokwu James.</h3>
+      </div>
+      <div class="header__mask">
+        <h1>
+          <span id="name_header"></span>
+        </h1>
+      </div>
+    </header>
+    <main>
+      <div class="section__title">
+        <h1>My Works.</h1>
+      </div>
+      <div class="works__section">
+        <div class="works__section__text">
+          <h1 class="work__section__text title">Swift Errands</h1>
+          <p class="work__section__text_description">
+            Logistics Platform for Delivering Percels<a
+              href="https://swifterrand.com"
+              type="button"
+              >Click To View</a
+            >
+          </p>
+        </div>
+        <div class="works__section__img">
+          <img
+            src="img/Screenshot_2020-04-28 Swifterrand.png"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+      <div class="works__section">
+        <div class="works__section__text">
+          <h1 class="work__section__text title">Arkad</h1>
+          <p class="work__section__text_description">
+            A simple budgeting App<a
+              href="http://arkad-app.herokuapp.com/"
+              type="button"
+              >Click To View</a
+            >
+          </p>
+        </div>
+        <div class="works__section__img">
+          <img src="img/Screenshot_2020-04-28 Arkad.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="works__section">
+        <div class="works__section__text">
+          <h1 class="work__section__text title">My Resume</h1>
+          <p class="work__section__text_description">
+            HTML and Css version of my resume<a
+              href="https://jamesresume.netlify.app/"
+              type="button"
+              >Click To View</a
+            >
+          </p>
+        </div>
+        <div class="works__section__img">
+          <img src="img/Screenshot_2020-04-28 Resume.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div id="stack" class="section__title">
+        <h1>My Stack.</h1>
+      </div>
+      <div class="stack__section">
+        <div class="stack__section__item">
+          <img src="img/vue.js.svg.png" alt="" srcset="" />
+          <p class="stack__name">Vue js</p>
+        </div>
+        <div class="stack__section__item">
+          <img src="img/1200px-Laravel.svg.png" alt="" srcset="" />
+
+          <p class="stack__name">Laravel</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="header__title">
+        <h3>compyright&copy;2019</h3>
+      </div>
+    </footer>
+    <script src="https://rawgit.com/mattboldt/typed.js/v2.0.6/lib/typed.min.js"></script>
+
+    <script>
+      var options = {
+        strings: [
+          "Hi am James<br> ^1000\n  i'm a <br> ^1000\n <span class='text_shadow'>WEB DEVELOPER</span> ^1000\n",
+        ],
+        typeSpeed: 40,
+        backSpeed: 0,
+        loop: true,
+      };
+      var typed = new Typed("#name_header", options);
+      //
+    </script>
+    <script>
+      var rightElements = document.querySelectorAll(
+        ".works__section:nth-child(even) div.works__section__text"
+      );
+      for (var i = 0; i < rightElements.length; i++) {
+        new Waypoint({
+          element: rightElements[i],
+          handler: function () {
+            anime({
+              targets: document.querySelectorAll(
+                ".works__section:nth-child(even) div.works__section__text"
+              ),
+              translateX: [0, -200],
+              opacity: [0, 1],
+              duration: 5000,
+              delay: function (el, i, l) {
+                return i * 1000;
+              },
+            });
+
+            console.log(rightElements[i], "even");
+          },
+          offset: "bottom-in-view",
+        });
+      }
+
+      var leftElements = document.querySelectorAll(
+        ".works__section:nth-child(odd) div.works__section__text"
+      );
+      for (var i = 0; i < leftElements.length; i++) {
+        new Waypoint({
+          element: leftElements[i],
+          handler: function () {
+            anime({
+              targets: document.querySelectorAll(
+                ".works__section:nth-child(odd) div.works__section__text"
+              ),
+              translateX: [0, 250],
+              opacity: [0, 1],
+              duration: 5000,
+              delay: function (el, i, l) {
+                return i * 1000;
+              },
+            });
+          },
+          offset: "bottom-in-view",
+        });
+      }
+    </script>
+    <script>
+      let element = document.getElementById("stack");
+      console.log(document.querySelectorAll(".stack__section__item img"));
+      new Waypoint({
+        element: document.getElementById("stack"),
+        handler: function () {
+          anime({
+            targets: document.querySelectorAll(".stack__section__item img"),
+            duration: 7000,
+            filter: ["grayscale(100%)", "grayscale(0%)"],
+            delay: anime.stagger(1000),
+            easing: "spring(1, 80, 10, 0)",
+          });
+          console.log("in stack section");
+        },
+        offset: "bottom-in-view",
+      });
+    </script>
+  </body>
+</html>
